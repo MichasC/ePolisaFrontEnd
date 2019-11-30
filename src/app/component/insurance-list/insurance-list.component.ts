@@ -12,14 +12,11 @@ export class InsuranceListComponent implements OnInit {
 
   insurance:Insurance[];
 
-
-
   constructor(private insuranceService: InsuranceService) {
-
   }
 
   ngOnInit() {
-    this.insuranceService.findById().subscribe(data=>this.insurance=data);
+    this.insuranceService.findAll().subscribe(data=>this.insurance=data);
   }
 
 

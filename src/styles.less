@@ -1,11 +1,14 @@
-tbody { color: #685206;
+tbody {
+  color: #685206;
   font-family: 'Helvetica Neue',
-  sans-serif; font-size: 14px;
+  sans-serif;
+  font-size: 14px;
   line-height: 24px;
   margin: 0 0 24px;
   text-align: justify;
   text-justify: inter-word;
 }
+
 .butt {
   border: none;
   background: #404040;
@@ -19,24 +22,46 @@ tbody { color: #685206;
 
 }
 
+
 .butt:hover {
   color: #404040 !important;
   font-weight: 700 !important;
   letter-spacing: 3px;
   background: none;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
   transition: all 0.3s ease 0s;
 }
-.butt:after{
-  position: relative; top:100px;
+
+.butt2 {
+  border: none;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 8px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+
+}
+
+.butt2:hover {
+  color: #404040 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
 }
 
 
-h1 { color: #111;
+h1 {
+  color: #111;
   font-family: 'Helvetica Neue',
   sans-serif;
-  font-size: 220px;
+  font-size: 200px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
@@ -44,7 +69,8 @@ h1 { color: #111;
 }
 
 
-h2 { color: #111;
+h2 {
+  color: #111;
   font-family: 'Open Sans',
   sans-serif;
   font-size: 30px;
@@ -54,10 +80,23 @@ h2 { color: #111;
   text-align: center;
 }
 
+.text {
+  color: #111;
+  font-family: 'Open Sans',
+  sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 12px;
 
-p { color: #685206;
+
+}
+
+p {
+  color: #685206;
   font-family: 'Helvetica Neue',
-  sans-serif; font-size: 14px;
+  sans-serif;
+  font-size: 14px;
   line-height: 24px;
   margin: 0 0 24px;
   text-align: justify;
@@ -65,15 +104,19 @@ p { color: #685206;
 }
 
 .container {
-  width:80%;
-  margin:auto;
+  width: 90%;
+  margin: auto;
 }
-table{
+
+table {
   border-spacing: 80px 1px;
+  margin-bottom: 150px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
-.div5{
+.div5 {
   font-family: 'Open Sans',
   sans-serif;
   font-size: 20px;
@@ -83,3 +126,31 @@ table{
   text-align: center;
 
 }
+
+.navi {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 80%;
+}
+
+.navi.left{
+  margin-left: 0px;
+  display: block;
+  width: 88%;
+
+
+}
+.navi.right {
+  width: 15%;
+  margin-right: 0px;
+  text-align: right;
+  display: block;
+
+
+}
+

@@ -10,13 +10,17 @@ import {ClientService} from './service/client.service';
 import { InsuranceListComponent } from './component/insurance-list/insurance-list.component';
 import {InsuranceService} from './service/insurance.service';
 import { ClientAddComponent } from './component/client-add/client-add.component';
+import { InsurancesClientComponent } from './component/insurances-client/insurances-client.component';
+import { LoginComponent } from './component/login/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientListComponent,
     InsuranceListComponent,
-    ClientAddComponent
+    ClientAddComponent,
+    InsurancesClientComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

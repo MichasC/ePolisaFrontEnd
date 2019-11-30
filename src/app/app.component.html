@@ -1,15 +1,22 @@
 <div class="container">
-  <div class="div3">
-    <button class="butt" routerLink="/insurance"> List Insurance</button>
-    <button class="butt" routerLink="/Listclient">List Client</button>
-    <button class="butt" routerLink="/addclient">Add Client</button>
+  <div class="navi">
+    <div class="navi left">
+      <button class="butt" routerLink="/insurance"> List All Insurance</button>
+      <button class="butt" routerLink="/client">List Client</button>
+      <button class="butt" routerLink="/add/client">Add Client</button>
+      <button class="butt" routerLink="/client/insurance">List Client Insurance</button>
+    </div>
+       <div class="navi right">
+      <button class="butt" routerLink="/login">Sign in</button>
+       </div>
   </div>
+
   <div class="col1">
     <h1>ePolisa</h1>
   </div>
   <div>
     <div>
-      <h2> Witaj na stronie ePolisa</h2>
+      <!--<h2> Witaj na stronie ePolisa</h2>-->
       <!--<app-client-list></app-client-list>-->
     </div>
     <router-outlet></router-outlet>

@@ -16,8 +16,12 @@ export class InsuranceService {
   public findAll(): Observable<Insurance[]> {
     return this.http.get<Insurance[]>(this.insuranceURL);
   }
-  public findById() : Observable<Insurance[]>{
-    return this.http.get<Insurance[]>(this.insuranceURL+'/2')
+  // public findById() : Observable<Insurance[]>{
+  //   return this.http.get<Insurance[]>(this.insuranceURL)
+  // }
+  public findClientInsurances(id: String) : Observable<Insurance[]>{
+
+    return this.http.get<Insurance[]>('http://localhost:8080/client/insurance/'+id)
   }
 
   // public save(insurance: Insurance) {

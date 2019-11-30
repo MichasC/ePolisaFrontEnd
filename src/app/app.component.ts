@@ -6,16 +6,16 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'ePolisa';
-  lists = {
-    todo: {
-      name: 'Michas',
-      task: [
-        'Todo #1',
-        'Todo #2',
-        'Todo #3'
-      ]
-
-    }
-  }
+  // title = 'ePolisa';
+  // lists = {
+  //   todo: {
+  //     name: 'Michas',
+  //     task: [
+  //       'Todo #1',
+  //       'Todo #2',
+  //       'Todo #3'
+  //     ]
+  //
+  //   }
+  // }
 }

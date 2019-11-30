@@ -24,7 +24,7 @@ export class ClientAddComponent {
     this.clientService.save(this.client).subscribe(result=>this.goToClientList());
   }
   goToClientList(){
-    this.router.navigate(['/Listclient'])
+    this.router.navigate(['/client'])
   }
 
 }
