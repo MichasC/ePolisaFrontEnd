@@ -1,0 +1,39 @@
+<div>
+  <div class="div5">
+    <form (ngSubmit)="onSubmit()" #add="ngForm">
+
+        <label for="firstName">Name</label>
+        <input type="text" [(ngModel)]="client.firstName"
+               class="form-control"
+               id="firstName"
+               name="firstName"
+               placeholder="Enter your name">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" [(ngModel)]="client.lastName"
+               class="form-control"
+               id="lastName"
+               name="lastName"
+               placeholder="Enter your Last Name">
+      <div>
+      <label for="email">Email</label>
+      <input type="text" [(ngModel)]="client.mail"
+             class="form-control"
+             id="email"
+             name="email"
+             placeholder="Enter your Email">
+        <label for="numberPhone">Number Phone</label>
+        <input type="text" [(ngModel)]="client.numberPhone"
+               class="form-control"
+               id="numberPhone"
+               name="numberPhone"
+               placeholder="Enter your Number Phone">
+
+
+      </div>
+<div>
+      <button type="submit" [disabled]="!add.form.valid">Submit</button>
+</div>
+    </form>
+  </div>
+</div>

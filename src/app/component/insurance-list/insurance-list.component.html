@@ -1,0 +1,22 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Data END</th>
+        <th scope="col">Date START</th>
+        <th scope="col">date Submission</th>
+        <th scope="col">Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let insurance of insurance">
+        <td>{{ insurance.dateEnd}}</td>
+        <td>{{ insurance.dateStart}}</td>
+        <td>{{ insurance.dateSubmission}}</td>
+        <td>{{insurance.price}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

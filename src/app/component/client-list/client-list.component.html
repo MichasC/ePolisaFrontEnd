@@ -1,0 +1,29 @@
+<div >
+  <div  class="div5">
+
+    <table>
+      <thead>
+      <tr>
+        <th  scope="col">Imię</th>
+        <th scope="col">Nazwisko</th>
+        <th scope="col">Email</th>
+        <th scope="col">Number Phone</th>
+        <th scope="col">Insurance</th>
+      </tr>
+      </thead>
+
+      <tbody >
+      <tr *ngFor="let client of client ">
+        <td>{{ client.firstName}}</td>
+        <td>{{ client.lastName }}</td>
+        <td>{{ client.mail }}</td>
+        <td>{{client.numberPhone}}</td>
+        <td>{{client.insurance}}</td>
+        <td>{{client.id}}</td>
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
