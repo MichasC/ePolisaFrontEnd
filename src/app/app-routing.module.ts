@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'insurance',component: InsuranceListComponent},
   {path: 'add/client',component: ClientAddComponent},
   {path: 'client/insurance',component: InsurancesClientComponent},
-  {path: 'login',component:LoginComponent}
+  {path: 'login' ,component: LoginComponent}
 ];
 
 @NgModule({

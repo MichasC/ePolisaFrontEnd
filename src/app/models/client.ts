@@ -3,6 +3,7 @@ import {Insurance} from './insurance';
 export class Client {
   id: number;
 
+  userName: String;
   firstName: String;
   lastName: String;
   numberPhone: number;

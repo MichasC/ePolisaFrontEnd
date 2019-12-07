@@ -12,6 +12,7 @@ import {InsuranceService} from './service/insurance.service';
 import { ClientAddComponent } from './component/client-add/client-add.component';
 import { InsurancesClientComponent } from './component/insurances-client/insurances-client.component';
 import { LoginComponent } from './component/login/login/login.component';
+import {LoginService} from './service/login.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { LoginComponent } from './component/login/login/login.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ClientService,InsuranceService],
+  providers: [ClientService,InsuranceService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

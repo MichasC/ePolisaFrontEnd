@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Client} from '../../models/client';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ClientService} from '../../service/client.service';
@@ -13,18 +13,19 @@ export class ClientAddComponent {
   client: Client;
 
   constructor(
-  private route: ActivatedRoute,
-      private router: Router,
-  private clientService: ClientService
+    private route: ActivatedRoute,
+    private router: Router,
+    private clientService: ClientService
   ) {
-    this.client=new Client();
+    this.client = new Client();
   }
 
-  onSubmit(){
-    this.clientService.save(this.client).subscribe(result=>this.goToClientList());
+  onSubmit() {
+    this.clientService.save(this.client).subscribe(result => this.goToClientList());
   }
-  goToClientList(){
-    this.router.navigate(['/client'])
+
+  goToClientList() {
+    this.router.navigate(['/client']);
   }
 
 }

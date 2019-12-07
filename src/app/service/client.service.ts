@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Client} from '../models/client';
+import {Login} from '../models/login';
 
 @Injectable()
 export class ClientService {
@@ -10,6 +11,7 @@ export class ClientService {
 
   constructor(private http: HttpClient) {
     this.clientUrl = 'http://localhost:8080/client';
+
   }
 
   public findAll(): Observable<Client[]> {
@@ -19,5 +21,8 @@ export class ClientService {
   public save(ClientDTO: Client) {
     return this.http.post<Client>(this.clientUrl, ClientDTO);
   }
+
+
+
 
 }
