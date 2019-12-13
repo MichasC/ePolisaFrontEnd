@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Client} from '../../models/client';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ClientService} from '../../service/client.service';
+import {Role} from '../../models/role';
+import {Insurance} from '../../models/insurance';
 
 @Component({
   selector: 'app-user-add',
@@ -10,14 +12,14 @@ import {ClientService} from '../../service/client.service';
 })
 export class ClientAddComponent {
 
-  client: Client;
+  client: Client = this.newClientWithValue();
+
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private clientService: ClientService
   ) {
-    this.client = new Client();
   }
 
   onSubmit() {
@@ -27,5 +29,14 @@ export class ClientAddComponent {
   goToClientList() {
     this.router.navigate(['/client']);
   }
+
+  newClientWithValue(): Client {
+    return {
+      firstName: '', password: '', userName: '', roles: [],
+       mail: '',  lastName: '',numberPhone: null,insurance:[]
+    };
+
+  }
+
 
 }

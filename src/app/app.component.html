@@ -4,12 +4,25 @@
       <button class="butt" routerLink="/insurance"> Oferta</button>
       <button class="butt" routerLink="/client">Lista Klientów</button>
       <button class="butt" routerLink="/add/client">Dodaj klienta</button>
+      <span [hidden]="!isLoggedIn">
       <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
+
+  </span>
     </div>
-       <div class="navi right">
+    <div class="navi right">
+      <span [hidden]="isLoggedIn">
       <button class="butt" routerLink="/login">Sign in</button>
-       </div>
+      </span>
+
+      <span [hidden]="!isLoggedIn">
+        <button class="butt" (click)="logout()">Logout</button>
+      </span>
+    </div>
+
+
+
   </div>
+
 
   <div class="col1">
     <h1>ePolisa</h1>

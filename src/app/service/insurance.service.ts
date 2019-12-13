@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Insurance} from '../models/insurance';
+import {TokenStorageService} from './token-storage.service';
 
-@Injectable(
-
-)
+@Injectable({
+    providedIn: 'root'
+  })
 export class InsuranceService {
   private insuranceURL: string;
 
@@ -20,7 +21,7 @@ export class InsuranceService {
   //   return this.http.get<Insurance[]>(this.insuranceURL)
   // }
   public findClientInsurances(id: String) : Observable<Insurance[]>{
-
+    // const idKlient = TokenStorageService.getLoggedUsername();
     return this.http.get<Insurance[]>('http://localhost:8080/client/insurance/'+id)
   }
 

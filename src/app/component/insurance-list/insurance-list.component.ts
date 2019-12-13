@@ -17,6 +17,7 @@ export class InsuranceListComponent implements OnInit {
 
   ngOnInit() {
     this.insuranceService.findAll().subscribe(data=>this.insurance=data);
+
   }
 
 

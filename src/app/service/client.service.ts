@@ -4,7 +4,9 @@ import {Observable} from 'rxjs';
 import {Client} from '../models/client';
 import {Login} from '../models/login';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ClientService {
 
   private clientUrl: string;
