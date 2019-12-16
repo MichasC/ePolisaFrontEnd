@@ -1,21 +1,5 @@
-<div class="div5">
-  <div class="text">
-    Lista wszystkich oferowanych ubezpieczeń
-  </div>
-  <div >
-    <table >
-      <thead >
-      <tr>
-        <th scope="col">Nazwa ubezpieczenia</th>
-        <th scope="col">Cena</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let insurance of insurance">
-        <td>{{ insurance.name}}</td>
-        <td>{{insurance.price}}</td>
-      </tr>
-      </tbody>
-    </table>
+<div class="div8">
+  <div  class="div7" *ngFor="let insurance of insurance">
+    <button class="button">{{insurance.name}}</button>
   </div>
 </div>

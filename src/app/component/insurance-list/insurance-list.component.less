@@ -1,0 +1,84 @@
+.btn2 {
+  transition: color 0.4s ease;
+  &:before {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(0);
+    border-radius: 50%;
+    background-color: #1E88E5;
+    width: 250px;
+    height: 250px;
+
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+  &.fade:before {
+    opacity: 0;
+  }
+  &.active {
+    color: white;
+    &:before {
+      opacity: 1;
+      transform: translate3d(-50%, -50%, 0) scale(1);
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  margin: 0 10px 20px;
+  color: #1E88E5;
+  border: 2px solid #1E88E5;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 15px 40px;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+  }
+  span {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+.div8{
+  clear: both;
+  display: block;
+  width: 80%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.div7{
+  float: left;
+  margin-top: 40px;
+}
+
+
+.button:active {
+  color: #000;
+  background: linear-gradient(15deg, #85abb6, #85abb6, #85abb6, #85abb6, #85abb6, #85abb6, #85abb6, #85abb6, #85abb6);
+}
+
+.button:active:after {
+  background: transparent;
+}
+
+.button:hover:before {
+  opacity: 1;
+}
+
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}

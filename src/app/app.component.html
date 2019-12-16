@@ -1,37 +1,23 @@
 <div class="container">
   <div class="navi">
     <div class="navi left">
-      <button class="butt" routerLink="/insurance"> Oferta</button>
-      <button class="butt" routerLink="/client">Lista Klientów</button>
-      <button class="butt" routerLink="/add/client">Dodaj klienta</button>
+      <button class="butt" routerLink="/products"> Aktualna oferta</button>
       <span [hidden]="!isLoggedIn">
-      <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
-
-  </span>
+        <button class="butt" routerLink="/client">Lista Klientów</button>
+        <button class="butt" routerLink="/add/client">Dodaj klienta</button>
+        <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
+      </span>
     </div>
     <div class="navi right">
       <span [hidden]="isLoggedIn">
       <button class="butt" routerLink="/login">Sign in</button>
       </span>
-
       <span [hidden]="!isLoggedIn">
         <button class="butt" (click)="logout()">Logout</button>
       </span>
     </div>
-
-
-
   </div>
 
+  <router-outlet></router-outlet>
 
-  <div class="col1">
-    <h1>ePolisa</h1>
-  </div>
-  <div>
-    <div>
-      <!--<h2> Witaj na stronie ePolisa</h2>-->
-      <!--<app-client-list></app-client-list>-->
-    </div>
-    <router-outlet></router-outlet>
-  </div>
 </div>

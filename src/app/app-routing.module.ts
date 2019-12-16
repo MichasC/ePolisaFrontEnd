@@ -7,10 +7,13 @@ import {InsurancesClientComponent} from './component/insurances-client/insurance
 import {LoginComponent} from './component/login/login/login.component';
 import {RoleEnum} from './models/role-enum';
 import {RoleGuardService} from './service/role-guard.service';
+import {IndexComponent} from './component/index/index.component';
+import {ProductsListComponent} from './component/products-list/products-list.component';
 
 
 const routes: Routes = [
   { path: 'client', component: ClientListComponent},
+  {path: '',component:IndexComponent},
   {path: 'insurance',component: InsuranceListComponent},
   {path: 'add/client',component: ClientAddComponent,
     canActivate: [RoleGuardService],
@@ -19,7 +22,8 @@ const routes: Routes = [
     }},
 
   {path: 'client/insurance',component: InsurancesClientComponent},
-  {path: 'login' ,component: LoginComponent }
+  {path: 'login' ,component: LoginComponent },
+  {path: 'products', component: ProductsListComponent}
 ];
 
 @NgModule({

@@ -15,6 +15,9 @@ import {LoginService} from './service/login.service';
 import {TokenStorageService as TokenStorage} from './service/token-storage.service';
 import {RoleGuardService} from './service/role-guard.service';
 import {InterceptorService} from './service/interceptor-service.service';
+import { IndexComponent } from './component/index/index.component';
+import { ProductsListComponent } from './component/products-list/products-list.component';
+import {ProductService} from './service/product.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import {InterceptorService} from './service/interceptor-service.service';
     InsuranceListComponent,
     ClientAddComponent,
     InsurancesClientComponent,
-    LoginComponent
+    LoginComponent,
+    IndexComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,7 @@ import {InterceptorService} from './service/interceptor-service.service';
     LoginService,
     TokenStorage,
     RoleGuardService,
+    ProductService,
     InterceptorService,
     {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],
