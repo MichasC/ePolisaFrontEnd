@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Login} from '../models/login';
 import {HttpClient} from '@angular/common/http';
-import {TokenStorageService} from './token-storage.service';
+import {TokenStorageService} from './Authentication/token-storage.service';
 
 @Injectable({
   providedIn: 'root'

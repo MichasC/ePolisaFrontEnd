@@ -2,15 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {Client} from '../../models/client';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ClientService} from '../../service/client.service';
-import {Role} from '../../models/role';
-import {Insurance} from '../../models/insurance';
+import {TokenStorageService} from '../../service/Authentication/token-storage.service';
+import {RoleEnum} from '../../models/role-enum';
 
 @Component({
   selector: 'app-user-add',
   templateUrl: './client-add.component.html',
   styleUrls: ['./client-add.component.less']
 })
-export class ClientAddComponent {
+export class ClientAddComponent{
 
   client: Client = this.newClientWithValue();
 
@@ -32,11 +32,10 @@ export class ClientAddComponent {
 
   newClientWithValue(): Client {
     return {
-      firstName: '', password: '', userName: '', roles: [],
-       mail: '',  lastName: '',numberPhone: null,insurance:[]
+      firstName: '', password: '', userName: '',
+       mail: '',  lastName: '',numberPhone: null
     };
 
   }
-
 
 }

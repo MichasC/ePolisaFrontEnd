@@ -1,0 +1,27 @@
+import { Injectable } from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivate, Router} from '@angular/router';
+import {TokenStorageService} from './token-storage.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class RoleGuardService implements CanActivate {
+
+
+  constructor(public router: Router) {
+  }
+
+  canActivate(route: ActivatedRouteSnapshot): boolean {
+
+    const expectedRole = route.data.roles;
+    const roles = TokenStorageService.getUserRoles();
+
+    // console.log(expectedRole,roles);
+    if (!TokenStorageService.isAuthenticated() || roles.indexOf(expectedRole) === -1) {
+    // if (!TokenStorageService.isAuthenticated()) {
+      this.router.navigate(['/']);
+      return false;
+    }
+    return true;
+  }
+}

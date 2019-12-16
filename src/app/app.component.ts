@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TokenStorageService} from './service/token-storage.service';
+import {TokenStorageService} from './service/Authentication/token-storage.service';
 import {Router} from '@angular/router';
 import {LoginService} from './service/login.service';
 import {RoleEnum} from './models/role-enum';
@@ -15,7 +15,8 @@ export class AppComponent implements OnInit {
 
   isLoggedIn = false;
   isAdmin = false;
-  isWarehouseman = false;
+  isAgent = false;
+  isClient = false;
   username = '';
   constructor(private token: TokenStorageService, private loginService: LoginService, private router: Router) {
   }
@@ -26,15 +27,19 @@ export class AppComponent implements OnInit {
     // }
     this.isAdmin = this.hasUserAdminPermission();
     this.username = TokenStorageService.getLoggedUsername();
-    this.isWarehouseman = this.hasUserWarehousemanPermission();
+    this.isAgent = this.hasUserAgentPermission();
+    this.isClient = this.hasClientAgentPermission();
   }
 
   private hasUserAdminPermission(): boolean {
     return TokenStorageService.hasUserRole(RoleEnum.ADMIN);
   }
 
-  private hasUserWarehousemanPermission(): boolean {
-    return TokenStorageService.hasUserRole(RoleEnum.WAREHOUSEMAN);
+  private hasUserAgentPermission(): boolean {
+    return TokenStorageService.hasUserRole(RoleEnum.AGENT);
+  }
+  private hasClientAgentPermission(): boolean {
+    return TokenStorageService.hasUserRole(RoleEnum.CLIENT);
   }
 
   logout() {

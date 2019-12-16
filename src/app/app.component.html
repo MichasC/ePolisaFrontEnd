@@ -2,10 +2,16 @@
   <div class="navi">
     <div class="navi left">
       <button class="butt" routerLink="/products"> Aktualna oferta</button>
-      <span [hidden]="!isLoggedIn">
+      <span [hidden]="!isClient">
+        <span [hidden]="!isAgent">
         <button class="butt" routerLink="/client">Lista Klientów</button>
+        </span>
+        <span [hidden]="!isAdmin">
         <button class="butt" routerLink="/add/client">Dodaj klienta</button>
+        </span>
+        <span [hidden]="!isClient">
         <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
+        </span>
       </span>
     </div>
     <div class="navi right">
@@ -13,7 +19,7 @@
       <button class="butt" routerLink="/login">Sign in</button>
       </span>
       <span [hidden]="!isLoggedIn">
-        <button class="butt" (click)="logout()">Logout</button>
+        <button class="butt" (click)="logout()" routerLink="/">Logout</button>
       </span>
     </div>
   </div>

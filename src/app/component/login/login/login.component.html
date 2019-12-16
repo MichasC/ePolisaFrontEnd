@@ -1,25 +1,21 @@
 <div class="div5">
-  <div class="text">
-    Logowanie
-  </div>
-  <div >
-
+  <div class="logo" routerLink="" >ePolisa</div>
+  <div class="form-style-2">
     <form (ngSubmit)="onSubmit()" >
 
-      <label for="userName">User Name</label>
+      <label for="userName">Login</label>
       <input type="text" [(ngModel)]="credentail1.username"
-             class="form-control"
              id="userName"
              name="userName"
-             placeholder="Wprowadz userName">
-      <label for="password">Password</label>
+             placeholder="Wprowadz login">
+      <label for="password">Hasło</label>
       <input type="text" [(ngModel)]="credentail1.password"
-             class="form-control"
              id="password"
              name="password"
              placeholder="Wprowadz hasło">
-        <button class="butt2" type="submit" >Submit</button>
-
+      <div>
+      <button class="butt2" type="submit" >Submit</button>
+      </div>
     </form>
 
   </div>

@@ -10,7 +10,7 @@ export interface Client {
   lastName: String;
   numberPhone: number;
   mail: string;
-  roles: Array<Role>;
+  roles?: Array<Role>;
   insurance?: Array<Insurance>;
   // discount?: Discount;
 
