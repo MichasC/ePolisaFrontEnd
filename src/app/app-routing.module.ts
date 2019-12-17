@@ -8,7 +8,9 @@ import {LoginComponent} from './component/login/login/login.component';
 import {RoleEnum} from './models/role-enum';
 import {RoleGuardService as RoleGuard} from './service/Authentication/role-guard.service';
 import {IndexComponent} from './component/index/index.component';
-import {ProductsListComponent} from './component/products-list/products-list.component';
+import {ProductsListComponent} from './component/product/products-list/products-list.component';
+import {ProductsAddComponent} from './component/product/products-add/products-add.component';
+import {ProductsComponent} from './component/product/products/products.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,9 @@ const routes: Routes = [
       roles: RoleEnum[RoleEnum.CLIENT]
     }},
   {path: 'login' ,component: LoginComponent },
-  {path: 'products', component: ProductsListComponent}
+  {path: 'product',component: ProductsComponent},
+  {path: 'products/list', component: ProductsListComponent},
+  {path: 'products/add',component: ProductsAddComponent}
 ];
 
 @NgModule({

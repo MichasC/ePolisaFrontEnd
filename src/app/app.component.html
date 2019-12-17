@@ -1,7 +1,7 @@
 <div class="container">
   <div class="navi">
     <div class="navi left">
-      <button class="butt" routerLink="/products"> Aktualna oferta</button>
+      <button class="butt" routerLink="/products/list"> Aktualna oferta</button>
       <span [hidden]="!isClient">
         <span [hidden]="!isAgent">
         <button class="butt" routerLink="/client">Lista Klientów</button>
@@ -12,6 +12,9 @@
         <span [hidden]="!isClient">
         <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
         </span>
+      </span>
+      <span [hidden]="!isMarketMan">
+        <button class="butt" routerLink="/product">Zarządzaj ofertami</button>
       </span>
     </div>
     <div class="navi right">

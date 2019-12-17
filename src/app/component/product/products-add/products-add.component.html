@@ -1,0 +1,32 @@
+<div>
+  <div class="div5">
+    <div class="form-style-4">
+      <form (ngSubmit)="onSubmit()" #add="ngForm">
+
+        <label for="firstName">Nazwa ubezpieczenia</label>
+        <input type="text" [(ngModel)]="product.name"
+               id="firstName"
+               name="firstName"
+               placeholder="Enter name">
+
+        <label for="lastName">Skrócona nazwa </label>
+        <input type="text" [(ngModel)]="product.AbridgementName"
+               id="lastName"
+               name="lastName"
+               placeholder="Enter Abridgement Name">
+
+        <label for="email">Opis szczegółowy</label>
+        <textarea [(ngModel)]="product.description" style="height: 60px;width: 600px;"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Description"> </textarea>
+
+        <div>
+          <button class="butt2" type="submit" [disabled]="!add.form.valid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

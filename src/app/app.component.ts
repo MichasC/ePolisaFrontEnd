@@ -11,12 +11,11 @@ import {RoleEnum} from './models/role-enum';
 })
 export class AppComponent implements OnInit {
 
-
-
   isLoggedIn = false;
   isAdmin = false;
   isAgent = false;
   isClient = false;
+  isMarketMan = false;
   username = '';
   constructor(private token: TokenStorageService, private loginService: LoginService, private router: Router) {
   }
@@ -28,7 +27,9 @@ export class AppComponent implements OnInit {
     this.isAdmin = this.hasUserAdminPermission();
     this.username = TokenStorageService.getLoggedUsername();
     this.isAgent = this.hasUserAgentPermission();
-    this.isClient = this.hasClientAgentPermission();
+    this.isClient = this.hasUserClientPermission();
+    this.isMarketMan = this.hasUserMarketManPermission();
+
   }
 
   private hasUserAdminPermission(): boolean {
@@ -38,8 +39,11 @@ export class AppComponent implements OnInit {
   private hasUserAgentPermission(): boolean {
     return TokenStorageService.hasUserRole(RoleEnum.AGENT);
   }
-  private hasClientAgentPermission(): boolean {
+  private hasUserClientPermission(): boolean {
     return TokenStorageService.hasUserRole(RoleEnum.CLIENT);
+  }
+  private hasUserMarketManPermission(): boolean {
+    return TokenStorageService.hasUserRole(RoleEnum.MARKETMAN);
   }
 
   logout() {

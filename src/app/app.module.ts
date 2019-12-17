@@ -16,8 +16,10 @@ import {TokenStorageService as TokenStorage} from './service/Authentication/toke
 import {RoleGuardService} from './service/Authentication/role-guard.service';
 import {InterceptorService} from './service/Authentication/interceptor-service.service';
 import { IndexComponent } from './component/index/index.component';
-import { ProductsListComponent } from './component/products-list/products-list.component';
+import { ProductsListComponent } from './component/product/products-list/products-list.component';
 import {ProductService} from './service/product.service';
+import { ProductsAddComponent } from './component/product/products-add/products-add.component';
+import { ProductsComponent } from './component/product/products/products.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import {ProductService} from './service/product.service';
     InsurancesClientComponent,
     LoginComponent,
     IndexComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    ProductsAddComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

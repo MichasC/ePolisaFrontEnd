@@ -39,7 +39,7 @@ export class TokenStorageService {
 
   public static getUserRoles(): Array<string> {
     if (TokenStorageService.getToken()) {
-      // console.log(decode(TokenStorageService.getToken()).scopes);
+      console.log(decode(TokenStorageService.getToken()).scopes);
       return decode(TokenStorageService.getToken()).scopes;
     }
     return new Array<string>();

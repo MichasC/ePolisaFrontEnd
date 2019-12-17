@@ -16,14 +16,18 @@ export class ProductService {
   }
 
   public findAll(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productURL);
+    return this.http.get<Product[]>(this.productURL+'/list');
   }
 
   public findByName(name: string): Observable<Product[]> {
     let params = new HttpParams();
     params = params.set('name', name);
-    return this.http.get<Product[]>(this.productURL+'/description',{params:params});
+    return this.http.get<Product[]>(this.productURL + '/description', {params: params});
 
-}
+  }
+
+  public addProduct(ProductDTO: Product) {
+    return this.http.post<Product>(this.productURL + '/add', ProductDTO);
+  }
 
 }

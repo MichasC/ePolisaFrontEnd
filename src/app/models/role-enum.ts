@@ -1,3 +1,3 @@
 export enum RoleEnum {
-  ADMIN, CLIENT, AGENT
+  ADMIN, CLIENT, AGENT, MARKETMAN
 }
