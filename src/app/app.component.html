@@ -10,11 +10,12 @@
         <button class="butt" routerLink="/add/client">Dodaj klienta</button>
         </span>
         <span [hidden]="!isClient">
-        <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
+          <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
+          <button class="butt" routerLink="/insurance/add">Zamów ubezpieczenie</button>
         </span>
       </span>
       <span [hidden]="!isMarketMan">
-        <button class="butt" routerLink="/product">Zarządzaj ofertami</button>
+        <button class="butt" routerLink="/product">Zarządzaj ofertami klienta </button>
       </span>
     </div>
     <div class="navi right">

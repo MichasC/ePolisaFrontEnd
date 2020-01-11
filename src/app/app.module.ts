@@ -6,10 +6,10 @@ import { ClientListComponent } from './component/client-list/client-list.compone
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {ClientService} from './service/client.service';
-import { InsuranceListComponent } from './component/insurance-list/insurance-list.component';
+import { InsuranceListComponent } from './component/insurance/insurance-list/insurance-list.component';
 import {InsuranceService} from './service/insurance.service';
 import { ClientAddComponent } from './component/client-add/client-add.component';
-import { InsurancesClientComponent } from './component/insurances-client/insurances-client.component';
+import { InsurancesClientComponent } from './component/insurance/insurances-client/insurances-client.component';
 import { LoginComponent } from './component/login/login/login.component';
 import {LoginService} from './service/login.service';
 import {TokenStorageService as TokenStorage} from './service/Authentication/token-storage.service';
@@ -20,6 +20,9 @@ import { ProductsListComponent } from './component/product/products-list/product
 import {ProductService} from './service/product.service';
 import { ProductsAddComponent } from './component/product/products-add/products-add.component';
 import { ProductsComponent } from './component/product/products/products.component';
+import { RegisterComponent } from './component/login/register/register.component';
+import { ProductsDeleteComponent } from './component/product/products-delete/products-delete.component';
+import { InsuranceAddComponent } from './component/insurance/insurance-add/insurance-add.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { ProductsComponent } from './component/product/products/products.compone
     IndexComponent,
     ProductsListComponent,
     ProductsAddComponent,
-    ProductsComponent
+    ProductsComponent,
+    RegisterComponent,
+    ProductsDeleteComponent,
+    InsuranceAddComponent
   ],
   imports: [
     BrowserModule,

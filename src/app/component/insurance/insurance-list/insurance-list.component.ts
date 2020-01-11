@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Insurance} from '../../models/insurance';
-import {InsuranceService} from '../../service/insurance.service';
+import {Insurance} from '../../../models/insurance';
+import {InsuranceService} from '../../../service/insurance.service';
 import {endWith} from 'rxjs/operators';
 
 @Component({

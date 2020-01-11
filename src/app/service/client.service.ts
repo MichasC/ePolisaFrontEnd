@@ -24,6 +24,10 @@ export class ClientService {
     return this.http.post<Client>(this.clientUrl, ClientDTO);
   }
 
+  public addClientUser( ClientDTO: Client){
+    return this.http.post<Client>('http://localhost:8080/register',ClientDTO);
+  }
+
 
 
 

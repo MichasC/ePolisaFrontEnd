@@ -20,6 +20,7 @@ export class ProductsAddComponent {
   ) { }
 
   onSubmit() {
+    console.log(this.product);
     this.productService.addProduct(this.product).subscribe(result=>this.goToProducts());
   }
 
@@ -29,7 +30,7 @@ export class ProductsAddComponent {
     };
   }
   goToProducts(){
-    this.router.navigate(['/products']);
+    this.router.navigate(['/products/list']);
   }
 
 }

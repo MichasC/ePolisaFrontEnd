@@ -30,4 +30,8 @@ export class ProductService {
     return this.http.post<Product>(this.productURL + '/add', ProductDTO);
   }
 
+  public deleteProduct(name: string) {
+    return this.http.post<string>(this.productURL+'/delete',name);
+  }
+
 }

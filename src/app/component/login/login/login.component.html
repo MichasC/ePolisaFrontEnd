@@ -9,12 +9,15 @@
              name="userName"
              placeholder="Wprowadz login">
       <label for="password">Hasło</label>
-      <input type="text" [(ngModel)]="credentail1.password"
+      <input type="password" [(ngModel)]="credentail1.password"
              id="password"
              name="password"
              placeholder="Wprowadz hasło">
       <div>
-      <button class="butt2" type="submit" >Submit</button>
+        <p> Nie masz konta? <a href="/register">Rejestracja</a> </p>
+      </div>
+      <div>
+      <button class="butt2" type="submit" >Zaloguj się</button>
       </div>
     </form>
 

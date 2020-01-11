@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Insurance} from '../../models/insurance';
-import {InsuranceService} from '../../service/insurance.service';
-import {Client} from '../../models/client';
+import {Insurance} from '../../../models/insurance';
+import {InsuranceService} from '../../../service/insurance.service';
+import {Client} from '../../../models/client';
 
 @Component({
   selector: 'app-insurances-client',
