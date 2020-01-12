@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Client} from '../../models/client';
+import {Client} from '../../../models/client';
 import {ActivatedRoute, Router} from '@angular/router';
-import {ClientService} from '../../service/client.service';
-import {TokenStorageService} from '../../service/Authentication/token-storage.service';
-import {RoleEnum} from '../../models/role-enum';
+import {ClientService} from '../../../service/client.service';
+import {TokenStorageService} from '../../../service/Authentication/token-storage.service';
+import {RoleEnum} from '../../../models/role-enum';
 
 @Component({
   selector: 'app-user-add',

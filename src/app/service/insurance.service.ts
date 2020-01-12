@@ -20,9 +20,8 @@ export class InsuranceService {
   // public findById() : Observable<Insurance[]>{
   //   return this.http.get<Insurance[]>(this.insuranceURL)
   // }
-  public findClientInsurances(id: String) : Observable<Insurance[]>{
-    // const idKlient = TokenStorageService.getLoggedUsername();
-    return this.http.get<Insurance[]>('http://localhost:8080/client/insurance/'+id)
+  public findClientInsurances(username: String) : Observable<Insurance[]>{
+    return this.http.post<Insurance[]>('http://localhost:8080/client/insurance',username)
   }
 
   // public save(insurance: Insurance) {

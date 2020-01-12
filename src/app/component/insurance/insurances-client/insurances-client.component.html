@@ -1,35 +1,26 @@
 <div class="div5">
-  <div class="text">
-    Lista ubezpieczeń użytkownika xxxx
-  </div>
-  <div >
-
-    <form (ngSubmit)="onSubmit()" #add="ngForm">
-
-      <label for="firstName">idKlient</label>
-      <input type="text" [(ngModel)]="id"
-             class="form-control"
-             id="firstName"
-             name="firstName"
-             placeholder="Enter idKlient">
-      <div>
-        <button class="butt2" type="submit" >Submit</button>
-      </div>
-    </form>
-
-    <table >
-      <thead >
-      <tr>
-        <th scope="col">Nazwa ubezpieczenia</th>
-        <th scope="col">Cena</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr  *ngFor="let insurance of insurance">
-        <td>{{ insurance.name}}</td>
-        <td>{{insurance.price}}</td>
-      </tr>
-      </tbody>
-    </table>
+  <div class="div3">
+    <div>
+      Your insurance list
+    </div>
+    <div>
+      <table>
+        <thead>
+        <tr>
+          <th scope="col">Name insurance</th>
+          <th scope="col">Value</th>
+          <th scope="col">Date End </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let insurance of insurance">
+          <td>{{ insurance.name}}</td>
+          <td>{{insurance.price}}</td>
+          <td>{{insurance.dateEnd}}</td>
+          <td><a routerLink="/client/insurance">More</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

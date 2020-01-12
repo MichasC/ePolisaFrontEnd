@@ -1,21 +1,19 @@
 <div class="container">
   <div class="navi">
     <div class="navi left">
-      <button class="butt" routerLink="/products/list"> Aktualna oferta</button>
+      <button class="butt" routerLink="/products/list">Current offer</button>
       <span [hidden]="!isClient">
-        <span [hidden]="!isAgent">
-        <button class="butt" routerLink="/client">Lista Klientów</button>
-        </span>
         <span [hidden]="!isAdmin">
-        <button class="butt" routerLink="/add/client">Dodaj klienta</button>
+        <button class="butt" routerLink="/client">Client list</button>
+        <button class="butt" routerLink="/add/client">Add client</button>
         </span>
         <span [hidden]="!isClient">
-          <button class="butt" routerLink="/client/insurance">Lista Twoich Ubezpieczeń</button>
-          <button class="butt" routerLink="/insurance/add">Zamów ubezpieczenie</button>
+          <button class="butt" routerLink="/client/insurance">Your insurances</button>
+          <button class="butt" routerLink="/insurance/add">Order insurance</button>
         </span>
       </span>
       <span [hidden]="!isMarketMan">
-        <button class="butt" routerLink="/product">Zarządzaj ofertami klienta </button>
+        <button class="butt" routerLink="/product">Prepare products </button>
       </span>
     </div>
     <div class="navi right">

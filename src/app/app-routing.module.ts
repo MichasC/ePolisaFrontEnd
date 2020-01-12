@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ClientListComponent} from './component/client-list/client-list.component';
-import {InsuranceListComponent} from './component/insurance/insurance-list/insurance-list.component';
-import {ClientAddComponent} from './component/client-add/client-add.component';
+import {ClientListComponent} from './component/client/client-list/client-list.component';
+import {InsuranceListComponent} from './component/insurance/insurance-all/insurance-list.component';
+import {ClientAddComponent} from './component/client/client-add/client-add.component';
 import {InsurancesClientComponent} from './component/insurance/insurances-client/insurances-client.component';
 import {LoginComponent} from './component/login/login/login.component';
 import {RoleEnum} from './models/role-enum';
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'client', component: ClientListComponent,
     canActivate: [RoleGuard],
     data: {
-      roles: RoleEnum[RoleEnum.AGENT]
+      roles: RoleEnum[RoleEnum.ADMIN]
     }},
   {path: '',component:IndexComponent},
   {path: 'insurance',component: InsuranceListComponent},
@@ -36,12 +36,29 @@ const routes: Routes = [
       roles: RoleEnum[RoleEnum.CLIENT]
     }},
   {path: 'login' ,component: LoginComponent },
-  {path: 'product',component: ProductsComponent},
+  {path: 'product',component: ProductsComponent,
+    canActivate: [RoleGuard],
+    data: {
+      roles: RoleEnum[RoleEnum.MARKETMAN]
+    }
+  },
   {path: 'products/list', component: ProductsListComponent},
-  {path: 'products/add',component: ProductsAddComponent},
+  {path: 'products/add',component: ProductsAddComponent,
+    canActivate: [RoleGuard],
+    data: {
+      roles: RoleEnum[RoleEnum.MARKETMAN]
+    }},
   {path: 'register', component: RegisterComponent},
-  {path: 'products/delete', component: ProductsDeleteComponent},
-  {path:'insurance/add', component: InsuranceAddComponent}
+  {path: 'products/delete', component: ProductsDeleteComponent,
+    canActivate: [RoleGuard],
+    data: {
+      roles: RoleEnum[RoleEnum.MARKETMAN]
+    }},
+  {path:'insurance/add', component: InsuranceAddComponent,
+    canActivate: [RoleGuard],
+    data: {
+      roles: RoleEnum[RoleEnum.CLIENT]
+    }}
 ];
 
 @NgModule({

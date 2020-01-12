@@ -26,7 +26,7 @@ export class ProductsAddComponent {
 
   newProduct():Product{
     return{
-      AbridgementName:'', name: '', description: ''
+      abridgementName:'', name: '', description: ''
     };
   }
   goToProducts(){

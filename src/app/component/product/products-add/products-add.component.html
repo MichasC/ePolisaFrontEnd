@@ -3,23 +3,23 @@
     <div class="form-style-4">
       <form (ngSubmit)="onSubmit()" #add="ngForm">
 
-        <label for="firstName">Nazwa ubezpieczenia</label>
+        <label for="firstName">Product name</label>
         <input type="text" [(ngModel)]="product.name"
                id="firstName"
                name="firstName"
                placeholder="Enter name">
 
-        <label for="lastName">Skrócona nazwa </label>
-        <input type="text" [(ngModel)]="product.AbridgementName"
+        <label for="lastName">Product abridgement name</label>
+        <input type="text" [(ngModel)]="product.abridgementName"
                id="lastName"
                name="lastName"
-               placeholder="Enter Abridgement Name">
+               placeholder="Enter text">
 
-        <label for="email">Opis szczegółowy</label>
+        <label for="email">Description</label>
         <textarea [(ngModel)]="product.description" style="height: 60px;width: 600px;"
                   id="email"
                   name="email"
-                  placeholder="Enter Description"> </textarea>
+                  placeholder="Enter description"> </textarea>
 
         <div>
           <button class="butt2" type="submit" [disabled]="!add.form.valid">Submit</button>

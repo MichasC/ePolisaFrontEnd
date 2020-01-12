@@ -1,5 +1,5 @@
 export  interface Product {
-  AbridgementName: string;
+  abridgementName: string;
   name: string;
   description: string;
 }
