@@ -1,0 +1,41 @@
+<div>
+  <div class="div5">
+    <div class="form-style-4">
+      <form (ngSubmit)="onSubmit()" #add="ngForm">
+
+        <label for="firstName">Imię</label>
+        <input type="text" [(ngModel)]="client.firstName"
+               id="firstName"
+               name="firstName"
+               placeholder="Enter name">
+
+        <label for="lastName">Nazwisko</label>
+        <input type="text" [(ngModel)]="client.lastName"
+               id="lastName"
+               name="lastName"
+               placeholder="Enter Abridgement Name">
+        <label for="mail">Adres email</label>
+        <input type="email" [(ngModel)]="client.mail"
+               id="mail"
+               name="mail"
+               placeholder="Enter your mail">
+        <label for="userName">Login</label>
+        <input type="text" [(ngModel)]="client.userName"
+               id="userName"
+               name="userName"
+               placeholder="Enter UserName">
+        <label for="password">Hasło</label>
+        <input type="password" [(ngModel)]="client.password"
+               id="password"
+               name="password"
+               placeholder="Enter password">
+
+        <div>
+          <button class="butt2" type="submit" [disabled]="!add.form.valid">Registry</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

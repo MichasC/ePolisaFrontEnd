@@ -1,0 +1,17 @@
+<div class="div8">
+  <div class="div7" >
+    <div class="div3">
+      <p><label for="select1">Select offer to delete</label></p>
+      <select id="select1" [(ngModel)]="name">
+        <option *ngFor="let product of product" [ngValue]="product.name">{{ product.name }}</option>
+      </select>
+      <div style="margin: 20px">
+      <form (ngSubmit)="onSubmit()" >
+      <div>
+        <button class="butt2" type="submit" [disabled]="add.form.valid">Delete</button>
+      </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
