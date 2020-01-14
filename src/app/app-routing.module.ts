@@ -14,6 +14,7 @@ import {ProductsComponent} from './component/product/products/products.component
 import {RegisterComponent} from './component/login/register/register.component';
 import {ProductsDeleteComponent} from './component/product/products-delete/products-delete.component';
 import {InsuranceAddComponent} from './component/insurance/insurance-add/insurance-add.component';
+import {InsuranceAdd2Component} from './component/insurance/insurance-add2/insurance-add2.component';
 
 
 const routes: Routes = [
@@ -58,7 +59,13 @@ const routes: Routes = [
     canActivate: [RoleGuard],
     data: {
       roles: RoleEnum[RoleEnum.CLIENT]
+    }},
+  {path: 'insurance/add/2', component: InsuranceAdd2Component,
+    canActivate: [RoleGuard],
+    data: {
+      roles: RoleEnum[RoleEnum.CLIENT]
     }}
+
 ];
 
 @NgModule({

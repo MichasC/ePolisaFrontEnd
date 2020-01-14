@@ -23,6 +23,8 @@ import { ProductsComponent } from './component/product/products/products.compone
 import { RegisterComponent } from './component/login/register/register.component';
 import { ProductsDeleteComponent } from './component/product/products-delete/products-delete.component';
 import { InsuranceAddComponent } from './component/insurance/insurance-add/insurance-add.component';
+import {PersonCarService} from './service/person-car.service';
+import { InsuranceAdd2Component } from './component/insurance/insurance-add2/insurance-add2.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { InsuranceAddComponent } from './component/insurance/insurance-add/insur
     ProductsComponent,
     RegisterComponent,
     ProductsDeleteComponent,
-    InsuranceAddComponent
+    InsuranceAddComponent,
+    InsuranceAdd2Component
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,7 @@ import { InsuranceAddComponent } from './component/insurance/insurance-add/insur
     TokenStorage,
     RoleGuardService,
     ProductService,
+    PersonCarService,
     InterceptorService,
     {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],

@@ -1,1 +1,41 @@
-<p>insurance-add works!</p>
+<div>
+  <div class="div5">
+    <button class="butt2 steps" >Step 1</button>
+    <button class="butt2 steps" disabled >Step 2</button>
+    <button class="butt2 steps" disabled >Step 3</button>
+    <button class="butt2 steps" disabled >Step 4</button>
+    <div class="form-style-4">
+      <form (ngSubmit)="onSubmit()" #add="ngForm">
+
+        <label for="Make">Make</label>
+        <input type="text" [(ngModel)]="personCar.make"
+               id="Make"
+               name="Make"
+               placeholder="Enter Make">
+
+        <label for="Model">Model</label>
+        <input type="text" [(ngModel)]="personCar.model"
+               id="Model"
+               name="Model"
+               placeholder="Enter Model">
+        <label for="dateProduction">Date Production Car</label>
+        <input type="date" [(ngModel)]="personCar.dateProduction"
+               id="dateProduction"
+               name="dateProduction"
+               placeholder="Enter date Production Car">
+        <label for="vehicleRegistration">Vehicle Registration</label>
+        <input type="text" maxlength="7" [(ngModel)]="personCar.vehicleRegistration"
+               id="vehicleRegistration"
+               name="vehicleRegistration"
+               placeholder="Enter Vehicle Registration">
+
+        <div>
+          <button class="butt2" type="submit"  >Add car</button>
+          <!--<button class="butt2" type="submit" [disabled]="!add.form.valid">Select your car</button>-->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

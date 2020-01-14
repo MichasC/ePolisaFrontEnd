@@ -37,6 +37,16 @@ tbody {
   margin-bottom: 2px;
 
 }
+.butt2{
+  padding: 8px;
+}
+
+.butt3{
+  font-size: 12px;
+  background: #606060;
+  padding: 10px;
+  margin-left: 10px;
+}
 
 .butt:hover,
 .butt2:hover,
@@ -50,17 +60,24 @@ tbody {
   transition: all 0.3s ease 0s;
 }
 
-.butt2{
-  padding: 8px;
+.butt2.steps{
+  background: #666666;
+  margin-left: 10%;
+  border-radius: 27px;
 }
 
-.butt3{
-  font-size: 12px;
-  background: #606060;
-  padding: 10px;
-  margin-left: 10px;
+.butt2.steps:hover{
+  letter-spacing: normal;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  color: #ffffff !important;
 }
 
+.butt2.steps:disabled{
+  background:  #ffffff;
+  color: #111 !important;
+  border: thin black !important;
+}
 
 h1 {
   color: #111;
@@ -143,8 +160,8 @@ table {
   justify-content: space-between;
   margin-bottom: 20px;
   position: relative;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 7%;
+  margin-right: 7%;
   max-width: 80%;
 }
 
@@ -161,6 +178,77 @@ table {
   display: block;
 }
 
+//
+//  Registration
+//
+.form-style-4{
+  width: 50%;
+  font-size: 16px;
+  padding: 30px 30px 15px 30px;
+  margin-left: 20%;
+
+}
+
+.form-style-4 textarea,
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 input[type=password],
+.form-style-4 label
+{
+  font-family: Georgia, 'Helvetica Neue', Times, serif;
+  font-size: 16px;
+  color: #111;
+
+}
+.form-style-4 label {
+  display:block;
+  margin-bottom: 10px;
+}
+.form-style-4 label > span{
+  display: inline-block;
+  float: left;
+  width: 50px;
+}
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 input[type=password]
+{
+  margin-bottom: 30px;
+  position: inherit;
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 400px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+}
+
+.form-style-4 textarea{
+  font-style: italic;
+  padding: 0px 0px 0px 0px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px dashed #83A4C5;
+  width: 275px;
+  overflow: hidden;
+  resize:none;
+  height:20px;
+}
+
+.form-style-4 textarea:focus,
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=password]:focus
+{
+  border-bottom: 1.5px dashed #ff0024;
+}
+
+
+//
+//  Registration end
+//
 
 
 

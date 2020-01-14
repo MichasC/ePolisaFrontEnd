@@ -1,6 +1,7 @@
 <div>
   <div class="div5">
-    <form (ngSubmit)="onSubmit()" #add="ngForm">
+    <div class="div3">
+      <form (ngSubmit)="onSubmit()" #add="ngForm">
 
         <label for="firstName">Name</label>
         <input type="text" [(ngModel)]="client.firstName"
@@ -15,25 +16,26 @@
                id="lastName"
                name="lastName"
                placeholder="Enter your Last Name">
-      <div class="div6">
-      <label for="email">Email</label>
-      <input type="text" [(ngModel)]="client.mail"
-             class="form-control"
-             id="email"
-             name="email"
-             placeholder="Enter your Email">
-        <label for="numberPhone">Number Phone</label>
-        <input type="text" [(ngModel)]="client.numberPhone"
-               class="form-control"
-               id="numberPhone"
-               name="numberPhone"
-               placeholder="Enter your Number Phone">
+        <div class="div6">
+          <label for="email">Email</label>
+          <input type="text" [(ngModel)]="client.mail"
+                 class="form-control"
+                 id="email"
+                 name="email"
+                 placeholder="Enter your Email">
+          <label for="numberPhone">Number Phone</label>
+          <input type="text" [(ngModel)]="client.numberPhone"
+                 class="form-control"
+                 id="numberPhone"
+                 name="numberPhone"
+                 placeholder="Enter your Number Phone">
 
 
-      </div>
-<div>
-      <button class="butt2" type="submit" [disabled]="!add.form.valid">Submit</button>
-</div>
-    </form>
+        </div>
+        <div>
+          <button class="butt2" type="submit" [disabled]="!add.form.valid">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
