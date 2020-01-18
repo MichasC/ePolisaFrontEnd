@@ -1,0 +1,43 @@
+<div>
+  <div class="div5">
+    <button class="butt2 steps" disabled>Step 1</button>
+    <button class="butt2 steps" disabled>Step 2</button>
+    <button class="butt2 steps">Step 3</button>
+    <button class="butt2 steps" disabled>Step 4</button>
+    <div class="div3">
+      <div class="div4">
+        <table class="table2">
+          <tr>
+            <th>Name</th>
+            <th>Values</th>
+          </tr>
+          <tr>
+            <td class="td1">Name insurance</td>
+            <td class="td2">{{insurance.name}}</td>
+          </tr>
+          <tr>
+            <td class="td1">Name product</td>
+            <td class="td2">{{product.name}}</td>
+          </tr>
+          <tr>
+            <td class="td1">Start insurance</td>
+            <td class="td2">{{insurance.dateStart}}</td>
+          </tr>
+          <tr>
+            <td class="td1">Car model</td>
+            <td class="td2">{{personCar.make}} {{personCar.model}}</td>
+          </tr>
+          <tr>
+            <td class="td1">Vehicle Registration</td>
+            <td class="td2">{{personCar.vehicleRegistration}}</td>
+          </tr>
+        </table>
+        <form (ngSubmit)="onSubmit()">
+          <button class="butt2" type="submit" style="margin-left: 80%;margin-top: 4%">Accept</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

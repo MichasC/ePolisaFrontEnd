@@ -15,8 +15,6 @@ export class InsurancesClientComponent implements OnInit{
   id :String;
   username: string;
 
-
-
   constructor(
     private insuranceService: InsuranceService
     ) {}

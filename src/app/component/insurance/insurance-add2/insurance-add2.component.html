@@ -1,0 +1,40 @@
+<div>
+  <div class="div5">
+    <button class="butt2 steps" disabled>Step 1</button>
+    <button class="butt2 steps">Step 2</button>
+    <button class="butt2 steps" disabled>Step 3</button>
+    <button class="butt2 steps" disabled>Step 4</button>
+    <div class="form-style-4">
+      <p><label for="select1">Select offer</label></p>
+      <select id="select1" #check="ngModel" [(ngModel)]="productCheck">
+        <option *ngFor="let product of product" [ngValue]="product ">{{ product.name }}</option>
+      </select>
+      <div style="margin: 20px">
+        <form (ngSubmit)="onSubmit()" #add="ngForm">
+          <label for="name">Name your insurance</label>
+          <input type="text" [(ngModel)]="insurance.name"
+                 id="name"
+                 name="name"
+                 placeholder="Enter name"
+                 required minlength="3"
+                 #empty="ngModel">
+          <label for="dateStart">Date Start</label>
+          <input type="date" [(ngModel)]="insurance.dateStart"
+                 id="dateStart"
+                 name="dateStart"
+                 placeholder="Enter Date"
+                 required minlength="1">
+            <div *ngIf="empty.errors">
+              <p>Empty fields!</p>
+            </div>
+
+          <div>
+            <button class="butt2" type="submit" [disabled]="add.form.invalid || productCheck ==null" >Next</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

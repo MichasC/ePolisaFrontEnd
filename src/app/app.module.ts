@@ -25,6 +25,8 @@ import { ProductsDeleteComponent } from './component/product/products-delete/pro
 import { InsuranceAddComponent } from './component/insurance/insurance-add/insurance-add.component';
 import {PersonCarService} from './service/person-car.service';
 import { InsuranceAdd2Component } from './component/insurance/insurance-add2/insurance-add2.component';
+import { InsuranceAdd3Component } from './component/insurance/insurance-add3/insurance-add3.component';
+import { InsuranceAdd4Component } from './component/insurance/insurance-add4/insurance-add4.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { InsuranceAdd2Component } from './component/insurance/insurance-add2/ins
     RegisterComponent,
     ProductsDeleteComponent,
     InsuranceAddComponent,
-    InsuranceAdd2Component
+    InsuranceAdd2Component,
+    InsuranceAdd3Component,
+    InsuranceAdd4Component
   ],
   imports: [
     BrowserModule,

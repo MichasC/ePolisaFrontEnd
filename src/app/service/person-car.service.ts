@@ -14,7 +14,6 @@ export class PersonCarService {
   }
 
   public addPersonCar(personCarDTO : PersonCar) {
-    console.log("test1");
     return this.http.post(this.privateURL + '/add' ,personCarDTO);
   }
 

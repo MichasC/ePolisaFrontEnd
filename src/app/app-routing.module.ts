@@ -15,6 +15,8 @@ import {RegisterComponent} from './component/login/register/register.component';
 import {ProductsDeleteComponent} from './component/product/products-delete/products-delete.component';
 import {InsuranceAddComponent} from './component/insurance/insurance-add/insurance-add.component';
 import {InsuranceAdd2Component} from './component/insurance/insurance-add2/insurance-add2.component';
+import {InsuranceAdd3Component} from './component/insurance/insurance-add3/insurance-add3.component';
+import {InsuranceAdd4Component} from './component/insurance/insurance-add4/insurance-add4.component';
 
 
 const routes: Routes = [
@@ -61,6 +63,16 @@ const routes: Routes = [
       roles: RoleEnum[RoleEnum.CLIENT]
     }},
   {path: 'insurance/add/2', component: InsuranceAdd2Component,
+    canActivate: [RoleGuard],
+    data: {
+      roles: RoleEnum[RoleEnum.CLIENT]
+    }},
+  {path: 'insurance/add/3', component: InsuranceAdd3Component,
+    canActivate: [RoleGuard],
+    data: {
+      roles: RoleEnum[RoleEnum.CLIENT]
+    }},
+  {path: 'insurance/add/4', component: InsuranceAdd4Component,
     canActivate: [RoleGuard],
     data: {
       roles: RoleEnum[RoleEnum.CLIENT]

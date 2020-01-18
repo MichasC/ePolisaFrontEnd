@@ -1,8 +1,14 @@
+import {Product} from './product';
+import {PersonCar} from './personCar';
+
 export class Insurance {
-  id: number;
+  id?: number;
   name:String;
-  dateSubmission: number;
+  dateSubmission: Date;
   dateStart: number;
   dateEnd: number;
   price: String;
+  product : Array<Product>;
+  personCar?: PersonCar;
+  statusInsurance? : boolean;
 }

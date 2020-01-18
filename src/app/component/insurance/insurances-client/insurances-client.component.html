@@ -4,19 +4,21 @@
       Your insurance list
     </div>
     <div>
-      <table>
+      <table class="table1">
         <thead>
         <tr>
           <th scope="col">Name insurance</th>
           <th scope="col">Value</th>
           <th scope="col">Date End </th>
+          <th scope="col">Status</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let insurance of insurance">
           <td>{{ insurance.name}}</td>
-          <td>{{insurance.price}}</td>
-          <td>{{insurance.dateEnd}}</td>
+          <td><div *ngIf="!insurance.price">-</div>{{insurance.price}}</td>
+          <td><div *ngIf="!insurance.price">-</div>{{insurance.dateEnd}}</td>
+          <td><div *ngIf="insurance.statusInsurance">Accepted</div><div *ngIf="!insurance.statusInsurance">In progress</div></td>
           <td><a routerLink="/client/insurance">More</a></td>
         </tr>
         </tbody>
